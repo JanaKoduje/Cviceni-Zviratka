@@ -18,7 +18,6 @@ const App = () => {
         })
     }, []);
 
-
   return (
     <>
       <h1>Zvířátka v ZOO</h1>
@@ -26,12 +25,8 @@ const App = () => {
         <AnimalList animalData={seznamZvirat} onChangeDetail={setDetail} />
         {seznamZvirat !== [] && detail ? <AnimalDetail details={seznamZvirat[detail - 1]} /> : null}
       </div>
-
     </>
   )
-
-
-    ;
 }
 
 render(<App />, document.querySelector('#app'));
