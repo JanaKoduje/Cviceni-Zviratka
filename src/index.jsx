@@ -18,15 +18,12 @@ const App = () => {
         })
     }, []);
 
-  const handleDetail = (id) => {
-    setDetail(id)
-  }
 
   return (
     <>
       <h1>Zvířátka v ZOO</h1>
       <div className="container">
-        <AnimalList animalData={seznamZvirat} onChangeDetail={handleDetail} />
+        <AnimalList animalData={seznamZvirat} onChangeDetail={setDetail} />
         {seznamZvirat !== [] && detail ? <AnimalDetail details={seznamZvirat[detail - 1]} /> : null}
       </div>
 
